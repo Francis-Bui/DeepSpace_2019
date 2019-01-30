@@ -13,6 +13,12 @@ package frc.robot;
  * the wiring easier and significantly reduces the number of magic numbers
  * floating around.
  */
+
+ /**
+ * Our robot's may have different wiring (motorcontrollers/victors are hooked up
+ *differently). Do not change the code, change the wiring between motorcontrollers.
+ */
+
 public class RobotMap {
 
 public static final int rightDriveFront = 2;
