@@ -159,8 +159,6 @@ bin/
 
 # # Custom
 .vscode/
-gradle/
-
 
 
 
