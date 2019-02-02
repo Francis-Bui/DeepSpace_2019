@@ -14,10 +14,10 @@ package frc.robot;
  * floating around.
  */
 
- /**
- * Our robot's may have different wiring (motorcontrollers/victors are hooked up
- *differently). Do not change the code, change the wiring between motorcontrollers.
- */
+ 
+ // Our robot's may have different wiring (motorcontrollers/victors are hooked up
+ //differently). Do not change the code, change the wiring between motorcontrollers.
+ 
 
 public class RobotMap {
 
@@ -27,4 +27,7 @@ public static final int rightDriveBack = 3;
 public static final int leftDriveFront = 0;
 public static final int leftDriveBack = 1;
 
+public static final int BALL_INTAKE_MOTOR = 4;
+
+public static final int HATCH_INTAKE_MOTOR =5;
 }

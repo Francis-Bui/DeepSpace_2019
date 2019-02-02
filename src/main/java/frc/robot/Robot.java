@@ -12,9 +12,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.Joystick;
+import frc.robot.subsystems.BallIntake;
 import frc.robot.subsystems.Drivetrain;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -24,12 +23,13 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
  * project.
  */
 public class Robot extends TimedRobot {
-  public static Drivetrain drivetrain = new Drivetrain();
+public static final BallIntake ballIntake = new BallIntake();
+public static Drivetrain drivetrain = new Drivetrain();
   public static OI m_oi;
  
  
 
-  private final Joystick m_stick = new Joystick(0);
+  
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
