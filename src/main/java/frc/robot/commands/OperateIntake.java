@@ -16,7 +16,7 @@ public class OperateIntake extends Command {
   }
 
   
-  private static final float INTAKE_POWER_PERCENT = 1.0f;
+  private static final float INTAKE_POWER_PERCENT = 0.7f;
 
   // Called just before this Command runs the first time
   @Override
@@ -27,8 +27,8 @@ public class OperateIntake extends Command {
   @Override
   protected void execute() {
 
-    boolean leftTrigger = robot.m_oi.getDriveLeftTrigger();
-    boolean rightTrigger = robot.m_oi.getDriveRightTrigger();
+    boolean leftTrigger = Robot.m_oi.getDriveLeftTrigger();
+    boolean rightTrigger = Robot.m_oi.getDriveRightTrigger();
     
     double engage; 
     // Forward or reverse based on trigger pressed
