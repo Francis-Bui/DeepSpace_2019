@@ -26,7 +26,21 @@ public class OperateIntake extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double engage = Robot.m_oi.getDriveRightY();
+
+    boolean leftTrigger = robot.m_oi.getDriveLeftTrigger();
+    boolean rightTrigger = robot.m_oi.getDriveRightTrigger();
+    
+    double engage; 
+    // Forward or reverse based on trigger pressed
+    if (leftTrigger) {
+      engage = -1; // Reverse
+    }
+    else if (rightTrigger) {
+      engage = 1; // fUlL SeNd
+    }
+    else {         
+      engage = 0; // stop
+    }
     Robot.ballIntake.runintake(INTAKE_POWER_PERCENT*engage);
   }
 
