@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.BallIntake;
+import frc.robot.subsystems.Pneumatics;
 import frc.robot.subsystems.Drivetrain;
 
 /**
@@ -24,6 +25,7 @@ import frc.robot.subsystems.Drivetrain;
  */
 public class Robot extends TimedRobot {
 public static final BallIntake ballIntake = new BallIntake();
+public static final Pneumatics pneumatic = new Pneumatics();
 public static Drivetrain drivetrain = new Drivetrain();
   public static OI m_oi;
  
