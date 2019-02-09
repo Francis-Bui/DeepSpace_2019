@@ -4,19 +4,22 @@ import frc.robot.commands.OperatePneumatics;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
-import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
 public class Pneumatics extends Subsystem {
     private static Pneumatics instance = null;
-    
-    Compressor c = new Compressor(0);
-    DoubleSolenoid boom = new DoubleSolenoid(1, 2);
-    DoubleSolenoid wrist = new DoubleSolenoid(3, 4);
+    public static final int COMPRESSOR_PCM_ID = 0;
+    public static final int BOOM_FORWARD_CHANNEL_ID = 0;
+    public static final int BOOM_REVERSE_CHANNEL_ID = 1;
+    public static final int WRIST_FORWARD_CHANNEL_ID = 2;
+    public static final int WRIST_REVERSE_CHANNEL_ID = 3;
+
+    Compressor c = new Compressor(COMPRESSOR_PCM_ID);
+    DoubleSolenoid boom = new DoubleSolenoid(BOOM_FORWARD_CHANNEL_ID, BOOM_REVERSE_CHANNEL_ID);
+    DoubleSolenoid wrist = new DoubleSolenoid(WRIST_FORWARD_CHANNEL_ID, WRIST_REVERSE_CHANNEL_ID);
 
     // Turns compressor on
 	public Pneumatics() {
         c.setClosedLoopControl(true);
-
     }
     
     // Move boom piston forward

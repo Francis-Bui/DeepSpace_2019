@@ -24,14 +24,10 @@ import frc.robot.subsystems.Drivetrain;
  * project.
  */
 public class Robot extends TimedRobot {
-public static final BallIntake ballIntake = new BallIntake();
-public static final Pneumatics pneumatic = new Pneumatics();
-public static Drivetrain drivetrain = new Drivetrain();
+  public static final BallIntake ballIntake = new BallIntake();
+  public static final Pneumatics pneumatic = new Pneumatics();
+  public static Drivetrain drivetrain = new Drivetrain();
   public static OI m_oi;
- 
- 
-
-  
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();

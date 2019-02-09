@@ -29,22 +29,23 @@ protected void initialize() {
     boolean button_x = Robot.m_oi.getDriveXButton();
     boolean button_y = Robot.m_oi.getDriveYButton();
 
+    // Forward and reverse of wrist
     if (button_a) {
         Robot.pneumatic.firstForward();
     }
-
-    if (button_b) {
-        Robot.pneumatic.secondForward();
-    }
-
-    if (button_x) {
+    else if (button_x) {
         Robot.pneumatic.firstReverse();
     }
 
-    if (button_y) {
+    // Forward and reverse of boom
+    if (button_b) {
+        Robot.pneumatic.secondForward();
+    }
+    else if (button_y) {
         Robot.pneumatic.secondReverse();
     }
  }
+ 
  // Make this return true when this Command no longer needs to run execute()
  @Override
  protected boolean isFinished() {
