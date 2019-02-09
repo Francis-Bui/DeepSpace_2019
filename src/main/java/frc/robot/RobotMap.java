@@ -21,11 +21,11 @@ package frc.robot;
 
 public class RobotMap {
 
-public static final int rightDriveFront = 2;
-public static final int rightDriveBack = 3;
+public static final int FRONT_RIGHT_DRIVE_MOTOR = 2;
+public static final int BACK_RIGHT_DRIVE_MOTOR = 3;
 
-public static final int leftDriveFront = 0;
-public static final int leftDriveBack = 1;
+public static final int FRONT_LEFT_DRIVE_MOTOR = 0;
+public static final int BACK_LEFT_DRIVE_MOTOR = 1;
 
 public static final int BALL_INTAKE_MOTOR = 4;
 

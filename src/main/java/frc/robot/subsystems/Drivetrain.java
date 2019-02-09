@@ -20,16 +20,16 @@ import edu.wpi.first.wpilibj.VictorSP;
 
 public class Drivetrain extends Subsystem {
 
-  VictorSP leftDriveFront,leftDriveBack, rightDriveFront, rightDriveBack;
+  VictorSP FRONT_LEFT_DRIVE_MOTOR, BACK_LEFT_DRIVE_MOTOR, FRONT_RIGHT_DRIVE_MOTOR, BACK_RIGHT_DRIVE_MOTOR;
   SpeedControllerGroup rightDrive;
   SpeedControllerGroup leftDrive;
 
   public Drivetrain(){
-    leftDriveFront = new VictorSP(RobotMap.leftDriveFront);
-    leftDriveBack = new VictorSP(RobotMap.leftDriveBack);
+    FRONT_LEFT_DRIVE_MOTOR = new VictorSP(RobotMap.FRONT_LEFT_DRIVE_MOTOR);
+    BACK_LEFT_DRIVE_MOTOR = new VictorSP(RobotMap.BACK_LEFT_DRIVE_MOTOR);
 
-    rightDriveFront = new VictorSP(RobotMap.rightDriveFront);
-    rightDriveBack = new VictorSP(RobotMap.rightDriveBack);
+    FRONT_RIGHT_DRIVE_MOTOR = new VictorSP(RobotMap.FRONT_RIGHT_DRIVE_MOTOR);
+    BACK_RIGHT_DRIVE_MOTOR = new VictorSP(RobotMap.BACK_RIGHT_DRIVE_MOTOR);
 
     //  rightDrive = new SpeedControllerGroup(rightDriveFront, rightDriveBack);
     //  leftDrive = new SpeedControllerGroup(rightDriveFront, leftDriveBack);
@@ -39,13 +39,13 @@ public class Drivetrain extends Subsystem {
       
 
   public void runRightDrive(double output){
-    rightDriveFront.set(-output);
-    rightDriveBack.set(-output);
+    FRONT_RIGHT_DRIVE_MOTOR.set(-output);
+    BACK_RIGHT_DRIVE_MOTOR.set(-output);
   }
 
   public void runLeftDrive(double output){
-    leftDriveFront.set(output);
-    leftDriveBack.set(output);
+    FRONT_LEFT_DRIVE_MOTOR.set(output);
+    BACK_LEFT_DRIVE_MOTOR.set(output);
   }
   
 
