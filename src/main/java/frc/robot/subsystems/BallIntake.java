@@ -3,7 +3,7 @@ package frc.robot.subsystems;
 import frc.robot.RobotMap;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import frc.robot.commands.OperateIntake;
+import frc.robot.commands.OperateBallIntake;
 
 
 /**
@@ -40,7 +40,7 @@ public class BallIntake extends Subsystem {
 
     @Override
     public void initDefaultCommand() {
-       setDefaultCommand(new OperateIntake());
+       setDefaultCommand(new OperateBallIntake());
     }
     public void button() {
         //sets the button int
