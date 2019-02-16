@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.BallIntake;
 import frc.robot.subsystems.Pneumatics;
 import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.HatchIntake;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -25,6 +26,7 @@ import frc.robot.subsystems.Drivetrain;
  */
 public class Robot extends TimedRobot {
   public static final BallIntake ballIntake = new BallIntake();
+  public static final HatchIntake hatchIntake = new HatchIntake();
   public static final Pneumatics pneumatic = new Pneumatics();
   public static Drivetrain drivetrain = new Drivetrain();
   public static OI m_oi;
