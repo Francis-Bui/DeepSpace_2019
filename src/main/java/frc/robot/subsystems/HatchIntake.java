@@ -5,7 +5,6 @@ import frc.robot.RobotMap;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.commands.OperateHatchIntake;
-import edu.wpi.first.wpilibj.TimedRobot;
 
 public class HatchIntake extends Subsystem {
 

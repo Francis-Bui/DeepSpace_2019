@@ -14,14 +14,19 @@ public class Pneumatics extends Subsystem {
     public static final int WRIST_REVERSE_CHANNEL_ID = 3;
 
     Compressor c = new Compressor(COMPRESSOR_PCM_ID);
-    DoubleSolenoid boom = new DoubleSolenoid(BOOM_FORWARD_CHANNEL_ID, BOOM_REVERSE_CHANNEL_ID);
-    DoubleSolenoid wrist = new DoubleSolenoid(WRIST_FORWARD_CHANNEL_ID, WRIST_REVERSE_CHANNEL_ID);
+    DoubleSolenoid boom = new DoubleSolenoid(COMPRESSOR_PCM_ID, BOOM_FORWARD_CHANNEL_ID, BOOM_REVERSE_CHANNEL_ID);
+    DoubleSolenoid wrist = new DoubleSolenoid(COMPRESSOR_PCM_ID, WRIST_FORWARD_CHANNEL_ID, WRIST_REVERSE_CHANNEL_ID);
 
-    // Turns compressor on
-	public Pneumatics() {
-        c.setClosedLoopControl(true);
+       
+      
+    // Turns compressor on and off\
+    public Pneumatics() { 
+    c.setClosedLoopControl(true);
+    //c.setClosedLoopControl(false);
+    
     }
     
+
     // Move boom piston forward
     public void firstForward(){
         boom.set(DoubleSolenoid.Value.kForward);

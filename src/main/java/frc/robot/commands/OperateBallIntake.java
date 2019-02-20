@@ -33,10 +33,10 @@ public class OperateBallIntake extends Command {
     double engage; 
     // Forward or reverse based on trigger pressed
     if (leftTrigger) {
-      engage = -1; // Reverse
+      engage = -1; // Reverse <-1 for full power shoot
     }
     else if (rightTrigger) {
-      engage = 1; // fUlL SeNd
+      engage = 1.428; // fUlL SeNd
     }
     else {         
       engage = 0; // stop
