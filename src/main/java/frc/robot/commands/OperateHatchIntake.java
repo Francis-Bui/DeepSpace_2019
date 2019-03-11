@@ -19,11 +19,11 @@ public class OperateHatchIntake extends Command {
   }
 
   
-  private static final float HATCH_INTAKE_POWER = .7f;
+  private static final float HATCH_INTAKE_POWER = 1f;
   private static final float HATCH_INTAKE_TIMEOUT = 2.5f; // must be > .0020 
   private static final float HATCH_INTAKE_MOVE_DURATION = .785f;
 
-  boolean goingDown =  false; 
+  /* boolean goingDown =  false; 
   boolean goingDownInitiated =  false; 
   
   boolean goingUp =  false; 
@@ -31,15 +31,15 @@ public class OperateHatchIntake extends Command {
 
   ToggleBoolean toggleUp = new ToggleBoolean(0.5); 
 
-  Timer timer;
+  Timer timer; */
 
 
 // Called just before this Command runs the first time
-  @Override
+  /* @Override
   protected void initialize() {
     setTimeout(HATCH_INTAKE_TIMEOUT);  // set 2 second timeout
     timer = new Timer();
-  }
+  } */
 
   // Called repeatedly when this Command is scheduled to run
   @Override
@@ -59,8 +59,9 @@ public class OperateHatchIntake extends Command {
 
     else {
       stopHatch();
+     }
     }
-      if (rightBumper) { // Down
+     /*  if (rightBumper) { // Down
       goingDown = true; 
       }
 
@@ -101,7 +102,7 @@ public class OperateHatchIntake extends Command {
       stopHatch();
      }
     
-  }
+  } */
 
   private void moveHatchUp() {
     moveHatch(1);
@@ -123,8 +124,8 @@ public class OperateHatchIntake extends Command {
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return  isTimedOut();
-    //return false;
+    //return  isTimedOut();
+    return false;
   }
   
   

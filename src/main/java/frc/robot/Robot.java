@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import frc.robot.subsystems.BallIntake;
 import frc.robot.subsystems.Pneumatics;
 import frc.robot.subsystems.Drivetrain;
@@ -24,12 +25,17 @@ import frc.robot.subsystems.HatchIntake;
  * creating this project, you must also update the build.gradle file in the
  * project.
  */
-public class Robot extends TimedRobot {
+
+
+ public class Robot extends TimedRobot {
   public static final BallIntake ballIntake = new BallIntake();
   public static final HatchIntake hatchIntake = new HatchIntake();
   public static final Pneumatics pneumatic = new Pneumatics();
   public static Drivetrain drivetrain = new Drivetrain();
   public static OI m_oi;
+
+  
+ 
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -84,20 +90,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    m_autonomousCommand = m_chooser.getSelected();
-
-    /*
-     * String autoSelected = SmartDashboard.getString("Auto Selector",
-     * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
-     * = new MyAutoCommand(); break; case "Default Auto": default:
-     * autonomousCommand = new ExampleCommand(); break; }
-     */
-
-    // schedule the autonomous command (example)
-    if (m_autonomousCommand != null) {
-      m_autonomousCommand.start();
     }
-  }
 
   /**
    * This function is called periodically during autonomous.
