@@ -1,9 +1,4 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2018 FIRST. All Rights Reserved.                             */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
+//Francis' Super Cool Code
 
 package frc.robot.commands;
 
@@ -29,14 +24,18 @@ public class OperateBallIntake extends Command {
 
     boolean leftTrigger = Robot.m_oi.getDriveLeftTrigger();
     boolean rightTrigger = Robot.m_oi.getDriveRightTrigger();
-    
+    boolean backButton = Robot.m_oi.getDriveBackButton();
+
     double engage; 
     // Forward or reverse based on trigger pressed
     if (leftTrigger) {
-      engage = -1.284; // Reverse <-1 for full power shoot
+      engage = 0.8; // Reverse <-1 for full power shoot
     }
     else if (rightTrigger) {
-      engage = 1; // fUlL SeNd
+      engage = -1; // fUlL SeNd
+    }
+    else if (backButton) {
+      engage = 1.142857;
     }
     else {         
       engage = 0; // stop

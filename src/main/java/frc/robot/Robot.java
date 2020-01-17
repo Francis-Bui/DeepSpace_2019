@@ -17,7 +17,6 @@ import frc.robot.subsystems.BallIntake;
 import frc.robot.subsystems.Pneumatics;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.HatchIntake;
-
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the TimedRobot
@@ -61,6 +60,7 @@ import frc.robot.subsystems.HatchIntake;
    */
   @Override
   public void robotPeriodic() {
+    Robot.m_oi.printDpad();
   }
 
   /**

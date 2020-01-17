@@ -7,11 +7,10 @@
 
 package frc.robot;
 
-
-
-
 import edu.wpi.first.wpilibj.Joystick;
-
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.PusherActuate;
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -25,6 +24,7 @@ public class OI {
 
 	Joystick drivePad;
 	Joystick toolPad;
+	Button startButton;
 
 	/**
 	 * Initializes the joystick objects 
@@ -33,8 +33,11 @@ public class OI {
 	{
 		drivePad = new Joystick (GamepadConstants.DRIVE_USB_PORT);
 		toolPad = new Joystick (GamepadConstants.TOOL_USB_PORT);
+		startButton = new JoystickButton(drivePad, 10);
+		startButton.whenPressed(new PusherActuate(false));
+		startButton.whenReleased(new PusherActuate(true));
 	}
-
+	
 	//***************************************************************************
 	//**************************** DRIVER CONTROLLER ****************************
 	//***************************************************************************
@@ -93,6 +96,9 @@ public class OI {
 			return 0.0;
 		else
 			return joy;
+	}
+	public int printDpad(){
+		return drivePad.getPOV(0);
 	}
 
 	public boolean getDriveDPadX() 
@@ -267,7 +273,7 @@ public class OI {
 	}
 
 	public double getToolDPadY() 
-	{
+	{  
 		return toolPad.getPOV(GamepadConstants.DPAD_Y);
 	}
 

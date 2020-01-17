@@ -1,16 +1,9 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2018 FIRST. All Rights Reserved.                             */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
+//Francis' Super Cool Code
 
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
-import frc.robot.ToggleBoolean;
-import edu.wpi.first.wpilibj.Timer;
 
 
 public class OperateHatchIntake extends Command {
@@ -20,9 +13,7 @@ public class OperateHatchIntake extends Command {
 
   
   private static final float HATCH_INTAKE_POWER = 1f;
-  private static final float HATCH_INTAKE_TIMEOUT = 2.5f; // must be > .0020 
-  private static final float HATCH_INTAKE_MOVE_DURATION = .785f;
-
+  // TEMP CODE FOR AUTO HATCH INTAKE
   /* boolean goingDown =  false; 
   boolean goingDownInitiated =  false; 
   
@@ -35,6 +26,7 @@ public class OperateHatchIntake extends Command {
 
 
 // Called just before this Command runs the first time
+// HATCH INTAKE TIMER
   /* @Override
   protected void initialize() {
     setTimeout(HATCH_INTAKE_TIMEOUT);  // set 2 second timeout
@@ -61,6 +53,7 @@ public class OperateHatchIntake extends Command {
       stopHatch();
      }
     }
+	// TEMP CODE FOR AUTO HATCH INTAKE
      /*  if (rightBumper) { // Down
       goingDown = true; 
       }

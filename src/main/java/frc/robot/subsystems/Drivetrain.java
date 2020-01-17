@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
 import frc.robot.commands.ArcadeDrive;
 
+
 //import com.ctre.phoenix.motorcontrol.ControlMode;
 //import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
@@ -30,6 +31,8 @@ public class Drivetrain extends Subsystem {
 
     FRONT_RIGHT_DRIVE_MOTOR = new VictorSP(RobotMap.FRONT_RIGHT_DRIVE_MOTOR);
     BACK_RIGHT_DRIVE_MOTOR = new VictorSP(RobotMap.BACK_RIGHT_DRIVE_MOTOR);
+    
+    
 
     //  rightDrive = new SpeedControllerGroup(rightDriveFront, rightDriveBack);
     //  leftDrive = new SpeedControllerGroup(rightDriveFront, leftDriveBack);
@@ -47,6 +50,8 @@ public class Drivetrain extends Subsystem {
     FRONT_LEFT_DRIVE_MOTOR.set(output);
     BACK_LEFT_DRIVE_MOTOR.set(output);
   }
+
+  
   
 
 
@@ -54,6 +59,7 @@ public class Drivetrain extends Subsystem {
   public void initDefaultCommand() {
      setDefaultCommand(new ArcadeDrive());
   }
+
 
   
 }
